@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Kmily</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+
+            
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('imagem/image.png');
+            
+            background-size: cover; /* Faz a imagem cobrir toda a tela */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Não deixa a imagem repetir */
+        }
+
+        #texto-surpresa {
+            font-size: 5rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            cursor: pointer;
+            text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #000; 
+            transition: all 0.3s ease;
+            user-select: none;
+            animation: piscar 1.5s infinite alternate;
+            text-align: center; 
+        }
+
+        @keyframes piscar {
+            0% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0.5; transform: scale(0.95); }
+        }
+
+        .pedido-feito {
+            animation: none !important;
+            color: #ff0000 !important;
+            text-shadow: 2px 2px 4px #000, 0 0 30px #ff0000 !important;
+            transform: scale(1.2) !important;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="texto-surpresa">Kmily</h1>
+
+    <script>
+        const elemento = document.getElementById('texto-surpresa');
+
+        elemento.addEventListener('click', function() {
+            elemento.innerText = "Hi baby girl uh";
+            elemento.classList.add('pedido-feito');
+        });
+    </script>
+
+</body>
+</html>
